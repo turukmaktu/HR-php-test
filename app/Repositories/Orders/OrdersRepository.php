@@ -4,8 +4,19 @@ namespace App\Repositories\Orders;
 
 use App\Order;
 
+/**
+ * Class OrdersRepository
+ * Репозиторий для работы с заказами
+ * @package App\Repositories\Orders
+ */
 class OrdersRepository
 {
+    /**
+     * Массив для получения табов на странице списков и получения допустисых типов в урле фильтра по типу
+     * @param bool $active
+     * @param int $limit
+     * @return array[]
+     */
     public static function getTabs($active = false, $limit = 50){
 
         return[
@@ -45,6 +56,10 @@ class OrdersRepository
 
     }
 
+    /**
+     * статусы заказов
+     * @return string[]
+     */
     public static function getStatuses(){
 
         return[
@@ -54,6 +69,9 @@ class OrdersRepository
         ];
     }
 
+    /*
+     * получение заказов по активному табу
+     */
     public function getOrdersByAcrive(array $active){
 
         $orders = Order::with( ['partner','products'])

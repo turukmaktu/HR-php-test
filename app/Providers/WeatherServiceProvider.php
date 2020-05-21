@@ -7,6 +7,11 @@ use function Psy\bin;
 use App\Repositories\Weather\WeatherRepositoryInterface;
 use App\Repositories\Weather\WeatherRepositoryYandex;
 
+/**
+ * Провайдер для погоды
+ * Class WeatherServiceProvider
+ * @package App\Providers
+ */
 class WeatherServiceProvider extends ServiceProvider
 {
     /**

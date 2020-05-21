@@ -1,10 +1,16 @@
 <?php
 namespace App\Repositories\Weather;
 
+/**
+ * Class WeatherRepositoryYandex
+ * Получение погоды от апи яндекса
+ * @package App\Repositories\Weather
+ */
 class WeatherRepositoryYandex implements WeatherRepositoryInterface
 {
     public function getWeather(float $lat, float $lon)
     {
+        //апи ключ для работы с апи
         $apiKey = config('yandex.keys.weather');
 
         if(!$apiKey){
