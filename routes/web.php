@@ -20,7 +20,7 @@ Route::get('/orders/{sort?}','OrdersController@index')
     ->name('orders')
     ->where(['sort' => implode(
         '|',
-        array_keys(OrdersRepository::getTabs())
+        array_keys(OrdersRepository::getTabs()) //фильтр только по табам из репозитория
     )]);
 
 Route::get('/orders/{id}/edit','OrdersController@edit')->name('orders.edit');
