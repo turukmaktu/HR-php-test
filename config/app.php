@@ -176,6 +176,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        //добавим сервиспровайдер погоды
+        App\Providers\WeatherServiceProvider::class,
 
     ],
 
